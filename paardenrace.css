@@ -8,12 +8,11 @@ html {
 }
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    
     margin: 0;
     padding: 0;
     width: 100vw;
     max-height: 100VH;
-    /* display: grid; */
 }
 
 
@@ -49,24 +48,21 @@ p {
 
 .race {
     display: grid;
+    
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(6, 1fr);
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
     justify-items: center;
-
-    /* align-items:end; */
     margin: 0;
     margin-left: 2em;
-    /* width: 100vw;
-    height: 100vh; */
     max-width: 100vw;
     max-height: 100%;
+    border-top: #000 2px solid;
 }
 
 .horse-card {
     border: 1px solid #ccc;
-    /* padding: 10px; */
     width: 5em;
     height: 7em;
     text-align: center;
@@ -75,11 +71,33 @@ p {
     font-weight: bold;
         background-size: 5em 7em;
         transition: transform 0.75s ease-in-out;
+     
 }
 
+ .side-line-card {
+     border: 1px solid #ccc;
+width: 5em;
+    height: 7em;
+     text-align: center;
+    font-weight: bold;
+    background-size: 5em 7em;
+    /* border: 2px solid #000; */
+ }
 
-/* Update the CSS to center the modal content using transform */
-/* Add this CSS to center the winner modal content using transform */
+ .deck{
+    display: grid;
+    border: 1px solid #ccc;
+        width: 5em;
+        height: 7em;
+        justify-content: center;
+        text-align: center;
+        font-weight: bold;
+        background-size: 5em 7em;
+        background-image: url('https://deckofcardsapi.com/static/img/back.png');
+        grid-row: 7;
+        grid-column: 5;
+ }
+
 .modal {
     display: none;
     position: fixed;
@@ -103,41 +121,7 @@ p {
     text-align: center;
     
 }
- /* Side line card */
- .side-line-card {
-     border: 1px solid #ccc;
-     /* padding: 10px; */
-width: 5em;
-    height: 7em;
-     text-align: center;
-    font-weight: bold;
-    background-size: 5em 7em;
-     /* margin: 5px; */
- }
- /* .race{ */
-    /* display: grid;
-    /* justify-content: end; */
-    /* max-height: 100vh;
-    max-width: 100vw ;
-    grid-template-rows: max-content max-content max-content;
-    ;  */
- /* } */
- .deck{
-    display: grid;
-    border: 1px solid #ccc;
-        /* padding: 10px; */
-        width: 5em;
-        height: 7em;
-        justify-content: center;
-        text-align: center;
-        font-weight: bold;
-        background-size: 5em 7em;
-        /* background-color: red; */
-        background-image: url('https://deckofcardsapi.com/static/img/back.png');
-        grid-row: 6;
-        grid-column: 5;
-        /* margin: 5px; */
- }
+
  
 
  
@@ -163,7 +147,6 @@ button {
         cursor: pointer;
         color: #fff;
         background-color: #007bff;
-        /* Blue color - you can change it to your desired color */
 
     }
 
@@ -276,4 +259,44 @@ button:disabled {
 .horse-card[data-suit="SPADES"] {
     background-image: url('https://deckofcardsapi.com/static/img/AS.png');
     /* Image URL for Ace of Spades will be set dynamically */
+}
+.border1{
+    border: 1px solid #000;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    width: 100%;
+}
+.border2{
+    border: 1px solid #000;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    width: 100%;
+}
+.border3{
+    border: 1px solid #000;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    width: 100%;
+}
+.border4{
+    border: 1px solid #000;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    width: 100%;
+}
+.border5{
+    border: 1px solid #000;
+    grid-row-start: 5;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    width: 100%;
 }
