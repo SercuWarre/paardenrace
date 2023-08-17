@@ -135,8 +135,8 @@ function moveHorse(cardSuit) {
     if (suitCount[suit] === 6) {
       winnerElement.textContent = `${suit} wins!`;
       const horseCard = document.querySelector(`[data-suit="${suit}"]`);
+        document.querySelector('.drawCardButton').removeEventListener('click', drawCard);
       displayWinnerModal(suit);
-      drawCardButton.disabled = true;
       break;
     }
   }
@@ -147,7 +147,11 @@ function displayWinnerModal(suit) {
   modalWinner.textContent = `${suit} wins!`;
 
   const modal = document.getElementById('myModal');
+  const startGameModalButton = document.getElementById('startGameModalButton');
+
+  // Set focus to the "Start Game" button
   modal.style.display = 'block';
+  startGameModalButton.focus();
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -157,6 +161,7 @@ document.addEventListener('DOMContentLoaded', function () {
   startGameModalButton.addEventListener('click', function () {
     location.reload(); // Reload the page to start a new game
   });
+  
   document.querySelector('.drawCardButton').addEventListener('click', drawCard);
   startGame();
 });
